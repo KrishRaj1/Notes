@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: #ffffff;
+  color: #111111;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+#note {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 28px);
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px;
+  font: 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: transparent;
+}
+
+#statusbar {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+#slugBadge {
+  color: #4b5563;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: #0b0b0b; color: #efefef; }
+  #statusbar { border-top-color: #262626; color: #9ca3af; }
+  #slugBadge { color: #d1d5db; }
+  #note { color: inherit; }
+}
