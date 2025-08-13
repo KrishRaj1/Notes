@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Notes</title>
+</head>
+<body>
+    <textarea id="notes" style="width:100%;height:100vh;"></textarea>
+    <script>
+        const textarea = document.getElementById('notes');
+        textarea.value = localStorage.getItem('notes') || '';
+        textarea.addEventListener('input', () => {
+            localStorage.setItem('notes', textarea.value);
+        });
+    </script>
+</body>
+</html>
